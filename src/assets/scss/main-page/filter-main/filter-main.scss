@@ -1,0 +1,8 @@
+.filter-main {
+  margin: 30px 0;
+  box-sizing: border-box;
+
+  & *, & *:after, & *:before {
+    box-sizing: border-box;
+  }
+}

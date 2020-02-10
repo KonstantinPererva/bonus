@@ -1,0 +1,36 @@
+.header-main {
+  font-family: OpenSans, sans-serif;
+  box-sizing: border-box;
+
+  & *, & *:after, & *:before {
+    box-sizing: border-box;
+  }
+
+  &__inner {
+    width: 1366px;
+    height: 100%;
+    padding: 0 42px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    background: #191A1B;
+    height: 40px;
+  }
+
+  &__middle {
+    background: #3d3d3d;
+    padding: 14px 0;
+  }
+
+  &__bottom {
+    background: #3d3d3d;
+    padding: 0 0 14px;
+  }
+}
+
+body {
+  background: #191A1B;
+  margin: 0;
+  padding: 0;
+}

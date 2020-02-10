@@ -1,0 +1,30 @@
+.header-main-language-list {
+  display: flex;
+  align-items: center;
+
+  & a {
+    margin: 0 0 0 8px;
+    display: block;
+    height: 19px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    line-height: 19px;
+    padding: 0 10px;
+    border-radius: 2px;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    &.act {
+      font-weight: bold;
+      background: #333;
+
+    }
+  }
+}
+
+#lang_site.header-main-language-list a {
+  margin-right: 0;
+}

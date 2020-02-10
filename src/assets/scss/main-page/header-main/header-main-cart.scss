@@ -1,0 +1,22 @@
+.header-main-cart {
+  display: flex;
+  align-items: center;
+
+  & button.button-main-cart {
+    display: inline-flex;
+  }
+
+  & a.button-main-cart {
+    display: none;
+  }
+
+  &.active {
+    & button.button-main-cart {
+      display: none;
+    }
+
+    & a.button-main-cart {
+      display: inline-flex;
+    }
+  }
+}

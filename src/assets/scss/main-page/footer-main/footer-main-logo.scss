@@ -1,0 +1,28 @@
+.footer-main-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-family: OpenSans, sans-serif;
+  font-size: 10px;
+  padding: 15px 0;
+
+  &__ico {
+    flex-shrink: 0;
+    display: block;
+    margin: 0 0 20px;
+    user-select: none;
+    outline: none;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  &__text {
+    flex-shrink: 0;
+  }
+}

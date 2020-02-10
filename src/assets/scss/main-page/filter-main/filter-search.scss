@@ -1,0 +1,15 @@
+.filter-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  visibility: hidden;
+
+  &.active {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+  }
+}

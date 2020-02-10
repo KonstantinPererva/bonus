@@ -1,0 +1,14 @@
+.section-page-title {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 28px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: OpenSans, sans-serif;
+  color: #fff;
+
+  &__ico {
+    margin: 0 15px 0 0;
+  }
+}

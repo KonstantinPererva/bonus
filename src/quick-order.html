@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home</title>
+</head>
+<body>
+<div class="popup-buy" style="display: none;">
+  <div class="popup-buy__hold">
+    <div class="popup-buy-content">
+      <div class="popup-buy-content__header">
+        <div class="popup-buy-title">
+          <span class="popup-buy-title__ico">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5608 16.4496V21.2594L14.9998 26.2026L6.47112 21.2601V16.4497H4.44873V21.8429C4.44873 22.2036 4.64086 22.5373 4.95298 22.7179L14.4922 28.2459C14.6489 28.3366 14.8239 28.3821 14.9991 28.3821C15.1738 28.3821 15.3484 28.3373 15.5047 28.2466L25.0777 22.7186C25.3908 22.5379 25.5833 22.2038 25.5833 21.8428V16.4496H23.5608Z" fill="#FBE11A"/>
+              <path d="M24.0764 9.93909L14.5295 15.3181L9.71104 17.8495L2.90482 13.7163L6.01734 11.6649L4.9043 9.97612L0.454931 12.9087C0.165072 13.0995 -0.00654686 13.4258 0.00019133 13.7726C0.00692952 14.1194 0.19097 14.4387 0.487919 14.6184L4.83311 17.2458L9.14767 19.875C9.30879 19.9734 9.49114 20.0227 9.67383 20.0227C9.83531 20.0227 9.99674 19.9839 10.1444 19.9067L15.4961 17.0945L25.069 11.7013L24.0764 9.93909Z" fill="#FBE11A"/>
+              <path d="M29.5481 12.9106L25.1324 9.97805L24.0133 11.6628L27.1002 13.7129L20.2886 17.8494L15.4975 15.3331L5.95827 9.93991L4.96289 11.7004L14.5294 17.1088L19.8549 19.9065C20.0025 19.984 20.1639 20.0224 20.3254 20.0224C20.5081 20.0224 20.6905 19.9729 20.8523 19.8748L25.1635 17.2477L29.5117 14.6185C29.8083 14.4392 29.9923 14.1206 29.9994 13.7745C30.0069 13.4284 29.8363 13.102 29.5481 12.9106Z" fill="#FBE11A"/>
+              <path d="M29.5135 7.02344L20.8506 1.76507C20.5483 1.58168 20.1728 1.56926 19.8603 1.73203L14.5346 4.49603C14.5228 4.50178 14.5113 4.50816 14.5002 4.51455L4.96094 9.94143L5.96106 11.6993L15.4831 6.28218L20.287 3.78882L27.103 7.92607L24.0134 9.97781L25.1325 11.6625L29.5482 8.73002C29.8364 8.53854 30.0066 8.21294 29.9995 7.86712C29.9928 7.52131 29.8094 7.20309 29.5135 7.02344Z" fill="#FBE11A"/>
+              <path d="M15.4985 4.51395C15.4873 4.50786 15.4766 4.50182 15.4654 4.49608L10.1397 1.73208C9.82656 1.56895 9.45104 1.58173 9.14934 1.76512L0.486552 7.02349C0.189896 7.20349 0.00655889 7.52235 0.000172263 7.86922C-0.00621437 8.21609 0.165346 8.54169 0.454912 8.73247L4.90428 11.665L6.01732 9.97622L2.9024 7.92342L9.71295 3.78892L14.5176 6.28258L24.0744 11.7004L25.0714 9.94083L15.4985 4.51395Z" fill="#FBE11A"/>
+              <path d="M16.0112 16.2137H13.9888V27.3708H16.0112V16.2137Z" fill="#FBE11A"/>
+            </svg>
+          </span>
+
+          <span class="popup-buy-title__text">Товар добавлен в корзину</span>
+        </div>
+
+        <button type="button" class="popup-buy-close" data-close="popup">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.82658 7.49984L14.7251 1.60128C15.0916 1.23512 15.0916 0.641012 14.7251 0.274854C14.3587 -0.0916178 13.7652 -0.0916178 13.3987 0.274854L7.50016 6.17342L1.60128 0.274854C1.23481 -0.0916178 0.641325 -0.0916178 0.274854 0.274854C-0.0916178 0.641012 -0.0916178 1.23512 0.274854 1.60128L6.17373 7.49984L0.274854 13.3984C-0.0916178 13.7646 -0.0916178 14.3587 0.274854 14.7248C0.458089 14.9078 0.698234 14.9994 0.938067 14.9994C1.1779 14.9994 1.41804 14.9078 1.60128 14.7245L7.50016 8.82596L13.3987 14.7245C13.582 14.9078 13.8221 14.9994 14.0619 14.9994C14.3018 14.9994 14.5419 14.9078 14.7251 14.7245C15.0916 14.3584 15.0916 13.7643 14.7251 13.3981L8.82658 7.49984Z" fill="#FBE11A"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="popup-buy-content__body">
+        <div class="popup-buy-detail">
+          <div class="popup-buy-detail__block">
+            <div class="cart-mob-card-img">
+              <img src="https://avtodiski.net.ua/picture/images/diski/Koleso-Mak/MAK/Nitro_ice_black-auto-125.jpg" alt="23-175-16596 Nitro">
+            </div>
+
+            <div class="cart-mob-card-art">
+              <a class="cart-mob-card-art__link" href="/disk/mak/nitro-16596">MAK Nitro R16 5x115 7J  ET40 DIA70.2 (ice black)</a><span class="prise cart-mob-card-art__art">Арт: 23-175-16596</span>                  </div>
+          </div>
+
+          <div class="popup-buy-detail__block popup-buy-detail-price">
+            <div class="cart-mob-card-price">
+              <div class="cart-mob-card-price-new">
+                <span class="cart-mob-card-price-new__num">2765</span>
+                <span class="cart-mob-card-price-new__currency">грн</span>
+              </div>
+
+              <div class="cart-mob-card-price-old">
+                <span class="cart-mob-card-price-old__num">3651.24</span></div>
+            </div>
+
+            <div class="count_good cart-mob-card-amount">
+              <span class="dec cart-mob-card-amount__minus">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
+                     height="2px">
+                  <path fill-rule="evenodd" fill="rgb(52, 52, 52)"
+                        d="M-0.000,-0.000 L14.000,-0.000 L14.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z" />
+                </svg>
+              </span>
+
+              <input class="quantity cart-mob-card-amount__num" type="text" name="qty_1" size="1" value="4" id="0"
+                     onchange="modOrdersCount('0', this.value);" />
+              <span class="inc cart-mob-card-amount__plus">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
+                     height="14px">
+                  <path fill-rule="evenodd" fill="rgb(52, 52, 52)"
+                        d="M14.000,8.000 L8.000,8.000 L8.000,14.000 L6.000,14.000 L6.000,8.000 L0.000,8.000 L0.000,6.000 L6.000,6.000 L6.000,-0.000 L8.000,-0.000 L8.000,6.000 L14.000,6.000 L14.000,8.000 Z" />
+                </svg>
+              </span>
+            </div>
+
+            <div class="cart-mob-card-total">
+              <span class="cart-mob-card-total__sum">11060</span><span class="cart-mob-card-total__currency">грн</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-buy-content__footer">
+        <div class="popup-button-wrapper">
+          <button type="button" class="popup-button-order">Оформить заказ</button>
+        </div>
+
+        <div class="popup-button-wrapper">
+          <button type="button" class="popup-button-continue">Продолжить покупки</button>
+        </div>
+      </div>
+    </div>
+
+    <span class="popup-buy-substrate"></span>
+  </div>
+</div>
+
+<div class="popup-buy" style="display: none;">
+  <div class="popup-buy__hold">
+    <div class="popup-buy-content">
+      <div class="popup-buy-content__header">
+        <div class="popup-buy-title">
+          <span class="popup-buy-title__ico">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5608 16.4496V21.2594L14.9998 26.2026L6.47112 21.2601V16.4497H4.44873V21.8429C4.44873 22.2036 4.64086 22.5373 4.95298 22.7179L14.4922 28.2459C14.6489 28.3366 14.8239 28.3821 14.9991 28.3821C15.1738 28.3821 15.3484 28.3373 15.5047 28.2466L25.0777 22.7186C25.3908 22.5379 25.5833 22.2038 25.5833 21.8428V16.4496H23.5608Z" fill="#FBE11A"/>
+              <path d="M24.0764 9.93909L14.5295 15.3181L9.71104 17.8495L2.90482 13.7163L6.01734 11.6649L4.9043 9.97612L0.454931 12.9087C0.165072 13.0995 -0.00654686 13.4258 0.00019133 13.7726C0.00692952 14.1194 0.19097 14.4387 0.487919 14.6184L4.83311 17.2458L9.14767 19.875C9.30879 19.9734 9.49114 20.0227 9.67383 20.0227C9.83531 20.0227 9.99674 19.9839 10.1444 19.9067L15.4961 17.0945L25.069 11.7013L24.0764 9.93909Z" fill="#FBE11A"/>
+              <path d="M29.5481 12.9106L25.1324 9.97805L24.0133 11.6628L27.1002 13.7129L20.2886 17.8494L15.4975 15.3331L5.95827 9.93991L4.96289 11.7004L14.5294 17.1088L19.8549 19.9065C20.0025 19.984 20.1639 20.0224 20.3254 20.0224C20.5081 20.0224 20.6905 19.9729 20.8523 19.8748L25.1635 17.2477L29.5117 14.6185C29.8083 14.4392 29.9923 14.1206 29.9994 13.7745C30.0069 13.4284 29.8363 13.102 29.5481 12.9106Z" fill="#FBE11A"/>
+              <path d="M29.5135 7.02344L20.8506 1.76507C20.5483 1.58168 20.1728 1.56926 19.8603 1.73203L14.5346 4.49603C14.5228 4.50178 14.5113 4.50816 14.5002 4.51455L4.96094 9.94143L5.96106 11.6993L15.4831 6.28218L20.287 3.78882L27.103 7.92607L24.0134 9.97781L25.1325 11.6625L29.5482 8.73002C29.8364 8.53854 30.0066 8.21294 29.9995 7.86712C29.9928 7.52131 29.8094 7.20309 29.5135 7.02344Z" fill="#FBE11A"/>
+              <path d="M15.4985 4.51395C15.4873 4.50786 15.4766 4.50182 15.4654 4.49608L10.1397 1.73208C9.82656 1.56895 9.45104 1.58173 9.14934 1.76512L0.486552 7.02349C0.189896 7.20349 0.00655889 7.52235 0.000172263 7.86922C-0.00621437 8.21609 0.165346 8.54169 0.454912 8.73247L4.90428 11.665L6.01732 9.97622L2.9024 7.92342L9.71295 3.78892L14.5176 6.28258L24.0744 11.7004L25.0714 9.94083L15.4985 4.51395Z" fill="#FBE11A"/>
+              <path d="M16.0112 16.2137H13.9888V27.3708H16.0112V16.2137Z" fill="#FBE11A"/>
+            </svg>
+          </span>
+
+          <span class="popup-buy-title__text">Заказ в один клик</span>
+        </div>
+
+        <button type="button" class="popup-buy-close">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.82658 7.49984L14.7251 1.60128C15.0916 1.23512 15.0916 0.641012 14.7251 0.274854C14.3587 -0.0916178 13.7652 -0.0916178 13.3987 0.274854L7.50016 6.17342L1.60128 0.274854C1.23481 -0.0916178 0.641325 -0.0916178 0.274854 0.274854C-0.0916178 0.641012 -0.0916178 1.23512 0.274854 1.60128L6.17373 7.49984L0.274854 13.3984C-0.0916178 13.7646 -0.0916178 14.3587 0.274854 14.7248C0.458089 14.9078 0.698234 14.9994 0.938067 14.9994C1.1779 14.9994 1.41804 14.9078 1.60128 14.7245L7.50016 8.82596L13.3987 14.7245C13.582 14.9078 13.8221 14.9994 14.0619 14.9994C14.3018 14.9994 14.5419 14.9078 14.7251 14.7245C15.0916 14.3584 15.0916 13.7643 14.7251 13.3981L8.82658 7.49984Z" fill="#FBE11A"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="popup-buy-content__body">
+        <div class="popup-buy-detail">
+          <div class="popup-buy-detail__block">
+            <div class="cart-mob-card-img">
+              <img src="https://avtodiski.net.ua/picture/images/diski/Koleso-Mak/MAK/Nitro_ice_black-auto-125.jpg" alt="23-175-16596 Nitro">
+            </div>
+
+            <div class="cart-mob-card-art">
+              <a class="cart-mob-card-art__link" href="/disk/mak/nitro-16596">MAK Nitro R16 5x115 7J  ET40 DIA70.2 (ice black)</a><span class="prise cart-mob-card-art__art">Арт: 23-175-16596</span>                  </div>
+          </div>
+
+          <div class="popup-buy-detail__block popup-buy-detail-price">
+            <div class="cart-mob-card-price">
+              <div class="cart-mob-card-price-new">
+                <span class="cart-mob-card-price-new__num">2765</span>
+                <span class="cart-mob-card-price-new__currency">грн</span>
+              </div>
+
+              <div class="cart-mob-card-price-old">
+                <span class="cart-mob-card-price-old__num">3651.24</span></div>
+            </div>
+
+            <div class="count_good cart-mob-card-amount">
+              <span class="dec cart-mob-card-amount__minus">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
+                     height="2px">
+                  <path fill-rule="evenodd" fill="rgb(52, 52, 52)"
+                        d="M-0.000,-0.000 L14.000,-0.000 L14.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z" />
+                </svg>
+              </span>
+
+              <input class="quantity cart-mob-card-amount__num" type="text" name="qty_1" size="1" value="4" id="0"
+                     onchange="modOrdersCount('0', this.value);" />
+              <span class="inc cart-mob-card-amount__plus">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
+                     height="14px">
+                  <path fill-rule="evenodd" fill="rgb(52, 52, 52)"
+                        d="M14.000,8.000 L8.000,8.000 L8.000,14.000 L6.000,14.000 L6.000,8.000 L0.000,8.000 L0.000,6.000 L6.000,6.000 L6.000,-0.000 L8.000,-0.000 L8.000,6.000 L14.000,6.000 L14.000,8.000 Z" />
+                </svg>
+              </span>
+            </div>
+
+            <div class="cart-mob-card-total">
+              <span class="cart-mob-card-total__sum">11060</span><span class="cart-mob-card-total__currency">грн</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-buy-content__footer">
+        <form action="!" class="form-quick-order">
+          <div class="form-quick-order__row">
+            <span class="form-quick-order__title">ФИО</span>
+
+            <input type="text" class="form-quick-order__input" />
+          </div>
+
+          <div class="form-quick-order__row">
+            <span class="form-quick-order__title">Номер телефона <span class="form-quick-order__required">*</span></span>
+
+            <input type="text" class="form-quick-order__input" />
+          </div>
+        </form>
+
+        <div class="popup-button-wrapper">
+          <button type="button" class="popup-button-order">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <span class="popup-buy-substrate"></span>
+  </div>
+</div>
+
+<div class="modal-main" style="">
+  <div class="modal-main__hold">
+    <div class="modal-main-content">
+      <div class="modal-main-content__header">
+        <div class="modal-main-title">
+          <span class="modal-main-title__ico">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5608 16.4496V21.2594L14.9998 26.2026L6.47112 21.2601V16.4497H4.44873V21.8429C4.44873 22.2036 4.64086 22.5373 4.95298 22.7179L14.4922 28.2459C14.6489 28.3366 14.8239 28.3821 14.9991 28.3821C15.1738 28.3821 15.3484 28.3373 15.5047 28.2466L25.0777 22.7186C25.3908 22.5379 25.5833 22.2038 25.5833 21.8428V16.4496H23.5608Z" fill="#FBE11A"/>
+              <path d="M24.0764 9.93909L14.5295 15.3181L9.71104 17.8495L2.90482 13.7163L6.01734 11.6649L4.9043 9.97612L0.454931 12.9087C0.165072 13.0995 -0.00654686 13.4258 0.00019133 13.7726C0.00692952 14.1194 0.19097 14.4387 0.487919 14.6184L4.83311 17.2458L9.14767 19.875C9.30879 19.9734 9.49114 20.0227 9.67383 20.0227C9.83531 20.0227 9.99674 19.9839 10.1444 19.9067L15.4961 17.0945L25.069 11.7013L24.0764 9.93909Z" fill="#FBE11A"/>
+              <path d="M29.5481 12.9106L25.1324 9.97805L24.0133 11.6628L27.1002 13.7129L20.2886 17.8494L15.4975 15.3331L5.95827 9.93991L4.96289 11.7004L14.5294 17.1088L19.8549 19.9065C20.0025 19.984 20.1639 20.0224 20.3254 20.0224C20.5081 20.0224 20.6905 19.9729 20.8523 19.8748L25.1635 17.2477L29.5117 14.6185C29.8083 14.4392 29.9923 14.1206 29.9994 13.7745C30.0069 13.4284 29.8363 13.102 29.5481 12.9106Z" fill="#FBE11A"/>
+              <path d="M29.5135 7.02344L20.8506 1.76507C20.5483 1.58168 20.1728 1.56926 19.8603 1.73203L14.5346 4.49603C14.5228 4.50178 14.5113 4.50816 14.5002 4.51455L4.96094 9.94143L5.96106 11.6993L15.4831 6.28218L20.287 3.78882L27.103 7.92607L24.0134 9.97781L25.1325 11.6625L29.5482 8.73002C29.8364 8.53854 30.0066 8.21294 29.9995 7.86712C29.9928 7.52131 29.8094 7.20309 29.5135 7.02344Z" fill="#FBE11A"/>
+              <path d="M15.4985 4.51395C15.4873 4.50786 15.4766 4.50182 15.4654 4.49608L10.1397 1.73208C9.82656 1.56895 9.45104 1.58173 9.14934 1.76512L0.486552 7.02349C0.189896 7.20349 0.00655889 7.52235 0.000172263 7.86922C-0.00621437 8.21609 0.165346 8.54169 0.454912 8.73247L4.90428 11.665L6.01732 9.97622L2.9024 7.92342L9.71295 3.78892L14.5176 6.28258L24.0744 11.7004L25.0714 9.94083L15.4985 4.51395Z" fill="#FBE11A"/>
+              <path d="M16.0112 16.2137H13.9888V27.3708H16.0112V16.2137Z" fill="#FBE11A"/>
+            </svg>
+          </span>
+
+          <span class="modal-main-title__text">Заказ в один клик</span>
+        </div>
+
+        <button type="button" class="modal-main-close">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.82658 7.49984L14.7251 1.60128C15.0916 1.23512 15.0916 0.641012 14.7251 0.274854C14.3587 -0.0916178 13.7652 -0.0916178 13.3987 0.274854L7.50016 6.17342L1.60128 0.274854C1.23481 -0.0916178 0.641325 -0.0916178 0.274854 0.274854C-0.0916178 0.641012 -0.0916178 1.23512 0.274854 1.60128L6.17373 7.49984L0.274854 13.3984C-0.0916178 13.7646 -0.0916178 14.3587 0.274854 14.7248C0.458089 14.9078 0.698234 14.9994 0.938067 14.9994C1.1779 14.9994 1.41804 14.9078 1.60128 14.7245L7.50016 8.82596L13.3987 14.7245C13.582 14.9078 13.8221 14.9994 14.0619 14.9994C14.3018 14.9994 14.5419 14.9078 14.7251 14.7245C15.0916 14.3584 15.0916 13.7643 14.7251 13.3981L8.82658 7.49984Z" fill="#FBE11A"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-main-content__body">
+        <div class="order-desktop">
+          <div class="order-desktop-alert" >
+            <span class="order-desktop-alert__text">Ваш заказ отправлен в корзину, Вы можете продолжить покупки или оформить заказ.</span>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card__left">
+              <div class="order-card__wrap-img">
+                <img src="" alt="goods" />
+              </div>
+
+              <div class="order-card__block">
+                <div class="order-card-vendor-code">
+                  <span class="order-card-vendor-code__title">Артикул:</span>
+
+                  <span class="order-card-vendor-code__num">24-31-77932</span>
+                </div>
+
+                <div class="order-card-name">
+                  <span class="order-card-name__text">Кованые диски BBS FI R20 5x120 10.5 ET28 DIA72.5 Satin Titanium (арт. 44-2-27206)</span>
+                </div>
+
+                <div class="order-card-price">
+                  <span class="order-card-price__val">3 854 грн</span>
+
+                  <span class="order-card-price__old-val">5 854 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-card__right">
+              <div class="order-card__block">
+                <div class="order-card-amount">
+                  <div class="order-card-amount-title">
+                    <span class="order-card-amount-title__text">Количество:</span>
+                  </div>
+
+                  <div class="amount">
+                    <span class="dec">
+                      <svg width="8" height="1" viewBox="0 0 8 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="1" width="8" height="1" transform="rotate(180 8 1)" fill="#191A1B"/>
+                      </svg>
+                    </span>
+
+                    <input class="quantity" type="text" name="" min="1" max="99" value="4" readonly="" />
+
+                    <span class="inc">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="4.5" width="8" height="1" transform="rotate(180 8 4.5)" fill="#191A1B"/>
+                        <rect x="4.5" width="8" height="1" transform="rotate(90 4.5 0)" fill="#191A1B"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="order-card-total">
+                  <span class="order-card-total__title">К оплате:</span>
+
+                  <span class="order-card-total__sum">23 854 грн</span>
+                </div>
+              </div>
+
+              <button class="button-order-card-delete" type="button">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.88439 5.00087L9.81676 1.0685C10.0611 0.824391 10.0611 0.428318 9.81676 0.184212C9.57245 -0.060102 9.17679 -0.060102 8.93248 0.184212L5.0001 4.11659L1.06752 0.184212C0.823206 -0.060102 0.42755 -0.060102 0.183236 0.184212C-0.0610786 0.428318 -0.0610786 0.824391 0.183236 1.0685L4.11582 5.00087L0.183236 8.93325C-0.0610786 9.17735 -0.0610786 9.57343 0.183236 9.81753C0.305393 9.93948 0.46549 10.0006 0.625378 10.0006C0.785266 10.0006 0.945363 9.93948 1.06752 9.81732L5.0001 5.88495L8.93248 9.81732C9.05464 9.93948 9.21473 10.0006 9.37462 10.0006C9.53451 10.0006 9.69461 9.93948 9.81676 9.81732C10.0611 9.57322 10.0611 9.17715 9.81676 8.93304L5.88439 5.00087Z" fill="#3D3D3D"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card__left">
+              <div class="order-card__wrap-img">
+                <img src="" alt="goods" />
+              </div>
+
+              <div class="order-card__block">
+                <div class="order-card-vendor-code">
+                  <span class="order-card-vendor-code__title">Артикул:</span>
+
+                  <span class="order-card-vendor-code__num">24-31-77932</span>
+                </div>
+
+                <div class="order-card-name">
+                  <span class="order-card-name__text">Кованые диски BBS FI R20 5x120 10.5 ET28 DIA72.5 Satin Titanium (арт. 44-2-27206)</span>
+                </div>
+
+                <div class="order-card-price">
+                  <span class="order-card-price__val">3 854 грн</span>
+
+                  <span class="order-card-price__old-val">5 854 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-card__right">
+              <div class="order-card__block">
+                <div class="order-card-amount">
+                  <div class="order-card-amount-title">
+                    <span class="order-card-amount-title__text">Количество:</span>
+                  </div>
+
+                  <div class="amount">
+                    <span class="dec">
+                      <svg width="8" height="1" viewBox="0 0 8 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="1" width="8" height="1" transform="rotate(180 8 1)" fill="#191A1B"/>
+                      </svg>
+                    </span>
+
+                    <input class="quantity" type="text" name="" min="1" max="99" value="4" readonly="" />
+
+                    <span class="inc">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="4.5" width="8" height="1" transform="rotate(180 8 4.5)" fill="#191A1B"/>
+                        <rect x="4.5" width="8" height="1" transform="rotate(90 4.5 0)" fill="#191A1B"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="order-card-total">
+                  <span class="order-card-total__title">К оплате:</span>
+
+                  <span class="order-card-total__sum">23 854 грн</span>
+                </div>
+              </div>
+
+              <button class="button-order-card-delete" type="button">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.88439 5.00087L9.81676 1.0685C10.0611 0.824391 10.0611 0.428318 9.81676 0.184212C9.57245 -0.060102 9.17679 -0.060102 8.93248 0.184212L5.0001 4.11659L1.06752 0.184212C0.823206 -0.060102 0.42755 -0.060102 0.183236 0.184212C-0.0610786 0.428318 -0.0610786 0.824391 0.183236 1.0685L4.11582 5.00087L0.183236 8.93325C-0.0610786 9.17735 -0.0610786 9.57343 0.183236 9.81753C0.305393 9.93948 0.46549 10.0006 0.625378 10.0006C0.785266 10.0006 0.945363 9.93948 1.06752 9.81732L5.0001 5.88495L8.93248 9.81732C9.05464 9.93948 9.21473 10.0006 9.37462 10.0006C9.53451 10.0006 9.69461 9.93948 9.81676 9.81732C10.0611 9.57322 10.0611 9.17715 9.81676 8.93304L5.88439 5.00087Z" fill="#3D3D3D"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-main-content__footer">
+        <div class="order-desktop-row">
+          <button type="button" class="button-order-continue">Продолжить покупки</button>
+
+          <div class="order-desktop-row__block">
+            <div class="order-total-full">
+              <span class="order-total-full__title">К оплате:</span>
+
+              <div class="order-total-full-sum">
+                <span class="order-total-full-sum__old">65 854 грн</span>
+
+                <span class="order-total-full-sum__current">53 854 грн</span>
+              </div>
+            </div>
+
+            <a class="button-go-cart" href="">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<span class="modal-main-substrate"></span>
+</body>
+</html>

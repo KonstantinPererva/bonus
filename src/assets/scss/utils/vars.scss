@@ -1,0 +1,92 @@
+// Font
+$f-l: 'lucida_sans_unicoderegular', sans-serif;
+
+$f-opt: 'Optima', sans-serif;
+$f-optBold: 'Optima-Bold', sans-serif;
+$f-optItalic: 'Optima-Italic', sans-serif;
+
+$f-akzReg: 'AkzidenzGroteskPro-Regular', sans-serif;
+$f-akzMd: 'AkzidenzGroteskPro-Md', sans-serif;
+
+$f-usb: 'Uni Sans Bold', sans-serif;
+
+// Size
+$desktopWidth            : 1280px;
+$smDesktopWidth          : 1260px;
+$tableWidth              : 1151px;
+$smtableWidth            : 1023px;
+$xtableWidth             : 992px;
+$phoneWidth              : 767px;
+$smPhoneWidth            : 420px;
+
+$p-m: 0 85px;
+
+// Main color
+$c-m-font: #222;
+$c-default : #fff;
+$c-m: #222;
+$c-descr: #646464;
+$c-placeholder: #a7a7a7;
+$c-gray: #bebebe;
+
+// Border
+$c-border-button: rgb(229,246,255);
+$c-m-bg: rgb(229,246,255);
+
+$shadow-border:
+        1px 1px 0 1px $c-border-button,
+        2px 2px 0 1px $c-border-button,
+        3px 3px 0 1px $c-border-button,
+        4px 4px 0 1px $c-border-button,
+        5px 5px 0 1px $c-border-button,
+        6px 6px 0 1px $c-border-button,
+        7px 7px 0 1px $c-border-button,
+        8px 8px 0 1px $c-border-button,
+
+        inset 1px 1px 0 1px $c-border-button,
+        inset 2px 2px 0 1px $c-border-button,
+        inset 3px 3px 0 1px $c-border-button,
+        inset 4px 4px 0 1px $c-border-button,
+        inset 5px 5px 0 1px $c-border-button,
+        inset 6px 6px 0 1px $c-border-button,
+        inset 7px 7px 0 1px $c-border-button,
+        inset 8px 8px 0 1px $c-border-button
+;
+
+$shadow-border-input:
+        1px 1px 0 1px $c-border-button,
+        2px 2px 0 1px $c-border-button,
+        3px 3px 0 1px $c-border-button,
+        4px 4px 0 1px $c-border-button,
+        5px 5px 0 1px $c-border-button,
+        6px 6px 0 1px $c-border-button,
+        7px 7px 0 1px $c-border-button,
+        8px 8px 0 1px $c-border-button
+;
+
+$shadow-border-inset:
+        inset 1px 1px 0 1px $c-border-button,
+        inset 2px 2px 0 1px $c-border-button,
+        inset 3px 3px 0 1px $c-border-button,
+        inset 4px 4px 0 1px $c-border-button,
+        inset 5px 5px 0 1px $c-border-button,
+        inset 6px 6px 0 1px $c-border-button,
+        inset 7px 7px 0 1px $c-border-button,
+        inset 8px 8px 0 1px $c-border-button
+;
+
+$shadow-border-sm:
+        1px 1px 0 1px $c-border-button,
+        2px 2px 0 1px $c-border-button,
+        3px 3px 0 1px $c-border-button,
+
+        inset 1px 1px 0 1px $c-border-button,
+        inset 2px 2px 0 1px $c-border-button,
+        inset 3px 3px 0 1px $c-border-button
+;
+
+
+$t-blink: 1000ms;
+$t-blink-25: $t-blink * .25;
+$t-blink-50: $t-blink * .5;
+$t-blink-75: $t-blink * .75;

@@ -1,0 +1,29 @@
+.popup-buy-detail {
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 7px 5px;
+
+  &__block {
+    display: flex;
+  }
+
+  &-price {
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  & .cart-mob-card-art__link {
+    text-decoration: none;
+  }
+
+  & .cart-mob-card-img {
+    width: 90px;
+    height: 90px;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

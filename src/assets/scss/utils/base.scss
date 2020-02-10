@@ -1,0 +1,19 @@
+html, body {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $c-m-font;
+}
+
+svg {
+  display: block;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}

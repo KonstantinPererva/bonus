@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .news-card * {
+        box-sizing: border-box;
+    }
+    .news-card {
+        height: 70px;
+        background: #F9F9F9;
+        border: 1px solid #F2F2F2;
+        box-sizing: border-box;
+        border-radius: 2px;
+        display: flex;
+        overflow: hidden;
+    }
+    .news-card-title {
+        flex-grow: 1;
+        font-family: OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        color: #3F4139;
+    }
+    .news-card-title__text {
+        display: block;
+
+    }
+    .news-card-button {
+        flex-shrink: 0;
+    }
+    .button-go-detail {
+        display: inline-flex;
+        min-width: 182px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        background: #3D8E10;
+        border: 1px solid #F2F2F2;
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+
+    .banner-sm {}
+    .banner-sm-pagination {}
+
+    .banner-sm-button-prev {}
+    .banner-sm-button-next {}
+</style>
+
+<div class="swiper-container banner-sm">
+    <div class="swiper-wrapper banner-sm-list">
+        <div class="swiper-slide banner-sm-item">
+            <div class="news-card">
+                <div class="news-card-title">
+                    <span class="news-card-title__text">Какая то акция на много текста и 20% скидки возможно в две строки</span>
+                </div>
+
+                <div class="news-card-button">
+                    <a href="#" class="button-go-detail">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide banner-sm-slide">
+            <div class="news-card">
+                <div class="news-card-title">
+                    <span class="news-card-title">Какая то акция на много текста и 20% скидки возможно в две строки</span>
+                </div>
+
+                <div class="news-card-button">
+                    <a href="#" class="button-go-detail">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide banner-sm-slide">
+            <div class="news-card">
+                <div class="news-card-title">
+                    <span class="news-card-title">Какая то акция на много текста и 20% скидки возможно в две строки</span>
+                </div>
+
+                <div class="news-card-button">
+                    <a href="#" class="button-go-detail">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-sm-pagination"></div>
+
+    <div class="banner-sm-button-prev">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.826076 5.40594L5.98588 0.246289C6.31411 -0.082097 6.84627 -0.082097 7.17434 0.246289C7.50243 0.574382 7.50243 1.10652 7.17434 1.43458L2.60871 6.00009L7.17421 10.5654C7.5023 10.8937 7.5023 11.4257 7.17421 11.7538C6.84611 12.0821 6.31398 12.0821 5.98575 11.7538L0.825943 6.5941C0.661897 6.42998 0.579966 6.2151 0.579966 6.00011C0.579966 5.78502 0.662056 5.56999 0.826076 5.40594Z" fill="#3F4139"/>
+        </svg>
+    </div>
+
+    <div class="banner-sm-button-next">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.17386 6.59406L2.01405 11.7537C1.68583 12.0821 1.15367 12.0821 0.825599 11.7537C0.497505 11.4256 0.497505 10.8935 0.825599 10.5654L5.39123 5.99991L0.825732 1.43457C0.497638 1.10635 0.497638 0.574263 0.825732 0.24617C1.15382 -0.0820565 1.68596 -0.0820565 2.01419 0.24617L7.174 5.4059C7.33804 5.57002 7.41997 5.7849 7.41997 5.99989C7.41997 6.21498 7.33788 6.43002 7.17386 6.59406Z" fill="#3F4139"/>
+        </svg>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<script>
+    var mySwiper = new Swiper('.banner-sm', {
+        speed: 600,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.banner-sm-button-next',
+            prevEl: '.banner-sm-button-prev',
+        },
+        pagination: {
+            el: '.banner-sm-pagination',
+            type: 'bullets',
+        },
+        autoplay: {
+            delay: 4000,
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.order-total-full-sum {
+  flex-shrink: 0;
+
+  &__old {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: OpenSans, sans-serif;
+    text-decoration: line-through;
+    color: #FF3232;
+    margin: 0 0 4px;
+  }
+
+  &__current {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: OpenSans, sans-serif;
+    color: #191A1B;
+    font-weight: bold;
+  }
+}

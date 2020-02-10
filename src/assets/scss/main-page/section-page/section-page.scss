@@ -1,0 +1,16 @@
+.section-page {
+  width: 1366px;
+  padding: 0 42px;
+  margin: 30px auto 0;
+  box-sizing: border-box;
+
+  & *, & *:after, & *:before {
+    box-sizing: border-box;
+  }
+
+  &__content {
+    background: #575757;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,22 @@
+.popup-button-continue {
+  min-width: 190px;
+  display: inline-flex;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  color: #333;
+  padding: 0 15px;
+  background: transparent;
+  font-weight: bold;
+  text-decoration: underline;
+  outline: none;
+  user-select: none;
+
+  &:hover, &:focus, &:active {
+    outline: none;
+    user-select: none;
+  }
+}

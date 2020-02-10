@@ -1,0 +1,18 @@
+a.button-view-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  font-family: OpenSans,sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-decoration: underline;
+  background: transparent;
+  outline: none;
+  user-select: none;
+
+  &:hover, &:active, &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}

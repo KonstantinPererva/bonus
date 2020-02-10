@@ -1,0 +1,21 @@
+//@import "utils/vars";
+//@import "utils/mixins";
+//@import "utils/normalize";
+//@import "utils/reset";
+//@import "utils/base";
+//@import "utils/fonts";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:after, &:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+
+

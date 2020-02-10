@@ -1,0 +1,12 @@
+.order-tel-list {
+  border: 1px solid #14C446;
+  background: #fff;
+
+  &__item {
+    border-bottom: 1px solid #14C446;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

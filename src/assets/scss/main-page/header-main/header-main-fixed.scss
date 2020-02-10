@@ -1,0 +1,31 @@
+.header-main-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: OpenSans, sans-serif;
+  box-sizing: border-box;
+  background: #3d3d3d;
+  z-index: 10000;
+  box-shadow: 0 0 6px rgba(0,0,0,0.35);
+  opacity: 1;
+  transition: 200ms;
+
+  & *, & *:after, & *:before {
+    box-sizing: border-box;
+  }
+
+  &.header-hidden {
+    opacity: 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 42px;
+    width: 1366px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
