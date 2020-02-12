@@ -9,6 +9,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 
   &:after, &:before {
     -webkit-box-sizing: border-box;
@@ -17,5 +18,14 @@
   }
 }
 
-
+@import "scale/wr-bl";
+@import "scale/bl-panel";
+@import "scale/bl-body";
+@import "scale/action-scale";
+@import "scale/bl-panel-title";
+@import "scale/btn-more-info";
+@import "scale/action-card-header";
+@import "scale/action-card";
+@import "scale/action-card-descr";
+@import "scale/btn-text-more-info";
 

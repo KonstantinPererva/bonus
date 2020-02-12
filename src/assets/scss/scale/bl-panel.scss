@@ -1,0 +1,18 @@
+.bl-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__box {
+
+    &_left {
+      flex-grow: 1;
+      padding: 0 20px 0 0;
+    }
+
+    &_right {
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.btn-more-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 12px;
+  min-width: 100px;
+  height: 25px;
+  user-select: none;
+  outline: none;
+  transition: .15s;
+  background: #344E9F;
+  border: 0;
+  cursor: pointer;
+  
+  &:hover {
+    outline: none;
+    background: #122a74;
+  }
+}

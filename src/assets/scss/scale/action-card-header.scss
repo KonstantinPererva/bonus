@@ -1,0 +1,24 @@
+.action-card-header {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
+   &__title {
+     font-size: 12px;
+     display: block;
+     line-height: 16px;
+     font-weight: bold;
+     width: 50%;
+   }
+
+  &__text {
+    font-size: 10px;
+    line-height: 16px;
+    display: block;
+    width: 50%;
+  }
+
+  &__date {
+    font-weight: bold;
+  }
+}

@@ -7,56 +7,94 @@
   <title>Home</title>
 </head>
 <body>
-  <div class="wr-bl">
-    <div class="bl-panel">
-      <div class="bl-panel__left">
-        <div class="bl-panel-title">
-          <span class="bl-panel-title__text">Накопительные акции</span>
-        </div>
-      </div>
-      <div class="bl-panel__right">
-        <button type="button" class="btn-more-info">Подробнее</button>
+
+<div class="wr-bl">
+  <div class="bl-panel">
+    <div class="bl-panel__box bl-panel__box_left">
+      <div class="bl-panel-title">
+        <span class="bl-panel-title__text">Накопительные акции</span>
       </div>
     </div>
 
-    <div class="bl-body">
-      <div class="bl-body__inner">
-        <div class="action-card">
-          <div class="action-card-header">
-            <span class="action-card-header__title">Накопительня Долгополов</span>
+    <div class="bl-panel__box bl-panel__box_right">
+      <button type="button" class="btn-more-info">Подробнее</button>
+    </div>
+  </div>
 
-            <span class="action-card-header__text">Действие акции заканчивается 31.06.2020</span>
+  <div class="bl-body">
+    <div class="bl-body__inner">
+      <div class="action-card" data-card="bonus">
+        <div class="action-card-header">
+          <span class="action-card-header__title">Накопительня Долгополов</span>
+
+          <span class="action-card-header__text">Действие акции заканчивается <span class="action-card-header__date">31.06.2020</span></span>
+        </div>
+
+        <div class="action-card-body">
+          <div class="action-card-descr">
+            <span class="action-card-descr__text">Условия акции orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</span>
+
+            <button class="btn-text-more-info" type="button">Узнать больше</button>
           </div>
 
-          <div class="action-card-body">
-            <div class="action-card-descr">
-              <span class="action-card-descr__text">Условия акции orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</span>
+          <div class="action-scale">
+            <div class="action-scale__box action-scale__box_left">
+              <span class="action-scale-row-title">Порог, грн:</span>
 
-              <button class="btn-more-info" type="button">Узнать больше</button>
+              <span class="action-scale-row-title">Бонус:</span>
             </div>
 
-            <div class="action-scale">
-              <div class="action-scale__left">
-                <span class="action-scale-row-title">Порог, грн:</span>
+            <div class="action-scale__box action-scale__box_right">
+              <div class="scale-line">
+                <div class="bonus-card-content__scale">
+                  <div class="scale" data-scale="bonus" data-bonus-type="bonus" data-min="0" data-max="50">
+                    <div class="scale__inner">
+                      <div class="scale-mark" data-mark="" data-position="10">
+                        <span class="scale-mark__text scale-mark__text_top scale-mark__text_center" data-mark-value="10">10</span>
 
-                <span class="action-scale-row-title">Бонус:</span>
-              </div>
-              <div class="action-scale__right">
-                <div class="scale-line">
+                        <span class="scale-mark__line"></span>
 
+                        <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">1%</span>
+                      </div>
+
+                      <div class="scale-mark" data-mark="" data-position="25">
+                        <span class="scale-mark__text scale-mark__text_top scale-mark__text_center" data-mark-value="25">25</span>
+
+                        <span class="scale-mark__line"></span>
+
+                        <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">1,5%</span>
+                      </div>
+
+                      <div class="scale-mark" data-mark="" data-position="50">
+                        <span class="scale-mark__text scale-mark__text_top scale-mark__text_center" data-mark-value="50">50</span>
+
+                        <span class="scale-mark__line"></span>
+
+                        <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">2%</span>
+                      </div>
+
+                      <div class="scale-track">
+                                                            <span class="scale-track__band" data-band="scale-track__band">
+                                                                <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                            </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="action-card-footer">
-            <div class="action-card-notification">
-              <span class="action-card-notification__text">Ваша выгода 59.32 грн</span>
-            </div>
+        <div class="action-card-footer">
+          <div class="action-card-notification">
+            <span class="action-card-notification__text" data-leading="30">Ваша выгода 59.32 грн</span>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,16 @@
+.btn-text-more-info {
+  font-size: 8px;
+  color: #344e9f;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

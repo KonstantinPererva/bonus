@@ -1,0 +1,15 @@
+.action-scale {
+  display: flex;
+
+  &__box {
+    flex-shrink: 0;
+
+    &_left {
+      width: 70px;
+    }
+
+    &_right {
+      flex-grow: 1;
+    }
+  }
+}
