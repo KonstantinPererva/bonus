@@ -1,0 +1,45 @@
+.action-scale-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.25);
+
+  &__band {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 20%;
+    background: #344E9F;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
+    transition: .8s;
+  }
+
+  &__pointer {
+    position: absolute;
+    right: -7px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 15px;
+    height: 15px;
+    box-shadow: 1px 1px 4px rgba(52, 78, 159, 0.25);
+    border-radius: 100%;
+    background: #fff;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      background: #344E9F;
+      border-radius: 100%;
+    }
+  }
+}

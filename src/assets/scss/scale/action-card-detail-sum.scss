@@ -1,0 +1,13 @@
+.action-card-detail-sum {
+  display: flex;
+
+  &__num {
+    width: 110px;
+    height: 27px;
+  }
+
+  &__title {
+    font-size: 8px;
+    line-height: 12px;
+  }
+}

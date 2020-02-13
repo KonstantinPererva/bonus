@@ -1,214 +1,151 @@
-// open characteristics block - dropdown
+function Scale(node) {
+    if (!node) { return; }
 
-function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+    var self = this;
+    self.slave = null;
+    self.wrapper = null;
+    self.leading = null;
 
-function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+    self.node = node || null;
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+    self.min = self.node.dataset.min || null;
+    self.max = self.node.dataset.max || null;
+    self.dif = parseInt(self.max, 10) - parseInt(self.min, 10);
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+    self.mark = self.node.querySelectorAll('[data-mark]') || null;
+    self.band = self.node.querySelector('[data-band]') || null;
 
-var Slide = function () {
-    function Slide(node, opt) {
-        _classCallCheck(this, Slide);
+    self.activeBonus = function() {
 
-        this.opt = opt || {};
-        this.option = Object.assign({
-            btn: '[data-button]',
-            box: '[data-box-dropdown]',
-            transition: 600,
-            onOpen: null
-        }, this.opt);
-        this.node = node;
-        this.btn = this.node.querySelector(this.option.btn);
-        this.box = this.node.querySelector(this.option.box);
-        this.heightBox = null;
-        this.open = false;
-    }
+        if (self.mark instanceof NodeList && self.mark.length > 0)
+        {
+            if (self.node.getAttribute('data-bonus-type') === 'present')
+            {
+                var isssetActiveBonus = false;
+                var nextThreshold = null;
+                var thresholdValue;
+                var nextThresholdValue;
+                var value = Number.parseInt(self.leading.dataset.leading);
 
-    _createClass(Slide, [{
-        key: "down",
-        value: function down() {
-            var _this = this;
+                for (var i = 0; i < self.mark.length; i++) {
 
-            function getSizeBoxes(elem) {
-                var elemWidth = elem.getBoundingClientRect().right - elem.getBoundingClientRect().left;
-                var elemHeight = elem.getBoundingClientRect().bottom - elem.getBoundingClientRect().top;
-                return {
-                    width: elemWidth,
-                    height: elemHeight
-                };
+                    self.mark[i].slave = self.mark[i].querySelector('[data-slave]');
+
+                    if (isssetActiveBonus === false)
+                    {
+                        nextThreshold = self.mark[i + 1];
+
+                        if (nextThreshold instanceof Node)
+                        {
+                            thresholdValue = Number.parseInt(self.mark[i].dataset.position);
+                            nextThresholdValue = Number.parseInt(nextThreshold.dataset.position);
+
+                            if (thresholdValue <= value && nextThresholdValue > value)
+                            {
+                                self.mark[i].slave.classList.add('bonus-active');
+                            }
+                            else
+                            {
+                                self.mark[i].slave.classList.remove('bonus-active');
+                            }
+                        }
+                        else
+                        {
+                            thresholdValue = Number.parseInt(self.mark[i].dataset.position);
+
+                            if (thresholdValue <= value)
+                            {
+                                self.mark[i].slave.classList.add('bonus-active');
+                            }
+                            else
+                            {
+                                self.mark[i].slave.classList.remove('bonus-active');
+                            }
+                        }
+                    }
+                }
             }
+            else
+            {
+                [].forEach.call(self.mark, function (mark) {
+                    mark.slave = mark.querySelector('[data-slave]');
 
-            var downBlock = new Promise(function (resolve, reject) {
-                _this.box.style.height = '';
-                _this.box.style.opacity = '0';
-                _this.box.style.display = 'block';
-                _this.heightBox = getSizeBoxes(_this.box).height;
-                _this.box.style.height = '0';
-                resolve();
-            }).then(function () {
-                setTimeout(function () {
-                    _this.box.style.transition = _this.option.transition + 'ms';
-                    _this.box.style.opacity = '1';
-                    _this.box.style.height = _this.heightBox + 'px';
+                    var pos = parseInt(mark.dataset.position, 10);
+                    var data = parseInt(self.leading.dataset.leading, 10);
 
-                    _this.open = true;
-                }, 0);
-            });
+                    if (pos <= data) {
+                        mark.slave.classList.add('bonus-active');
+                    } else {
+                        mark.slave.classList.remove('bonus-active');
+                    }
+                });
+            }
         }
-    }, {
-        key: "up",
-        value: function up() {
-            var _this2 = this;
+    };
 
-            var upBlock = new Promise(function (resolve, reject) {
-                _this2.box.style.height = '0';
-                _this2.box.style.opacity = '0';
+    self.setLeading = function() {
+        self.parentSearch(self.node);
+        self.leading = self.wrapper.querySelector('[data-leading]') || null;
+    };
 
-                resolve();
-            }).then(function () {
-                setTimeout(function () {
-                    _this2.box.style.display = 'none';
-                    _this2.open = false;
-                }, _this2.option.transition);
-            });
+    self.parentSearch = function(el) {
+        var parent = el.parentElement;
+
+        if (parent.dataset.card === "bonus") {
+            return self.wrapper = parent;
         }
-    }]);
 
-    return Slide;
-}();
+        self.parentSearch(parent);
+    };
 
-if (document.querySelectorAll('.order-tel').length) {
-    var slides = document.querySelectorAll('.order-tel');
-    [].forEach.call(slides, function (el) {
-        var slide = new Slide(el, {
-            btn: '[data-button="open-tel"]',
-            box: '[data-box-dropdown="tel"]',
-            transition: 300
-        });
+    self.fullness = function() {
+        var data = self.leading.dataset.leading;
+        var per = (parseInt(data, 10) - self.min) * 100 / self.dif;
 
-        slide.toggle = function () {
-            return slide.open ? slide.up() : slide.down();
-        };
+        if (per > 100) {
+            self.band.style.width = "100%";
+        } else if (per < 0) {
+            self.band.style.width = "0";
+        } else {
+            self.band.style.width = per + "%";
+        }
+    };
 
-        slide.btn.addEventListener('click', slide.toggle);
-    });
+    self.positionMark = function() {
+        [].forEach.call(self.mark, function (mark, ind) {
+            var pos = mark.dataset.position;
+            var per = (parseInt(pos, 10) - self.min) * 100 / self.dif;
+
+            if (self.mark[0] === self.mark[ind]) {
+                mark.style.left = per + "%";
+            } else {
+                mark.style.left = "calc(" + per + "% - 1px)";
+            }
+        })
+    };
+
+    self.recalculateScale = function() {
+        self.fullness();
+        self.activeBonus();
+    };
+
+    self.init = function() {
+        self.positionMark();
+        self.setLeading();
+        self.fullness();
+        self.activeBonus();
+    };
+
+    return {
+        init: self.init,
+        recalculate: self.recalculateScale
+    }
 }
 
-
-
-(function fixedHeaderMainDesktop() {
-    var self = this;
-
-    if (document.querySelectorAll('.header-main__wrapper-children').length) {
-        self.header = document.querySelector('.header-main__wrapper-children');
-        self.headerFixed = document.querySelector('.header-main-fixed');
-        self.headerHeight = self.header.getBoundingClientRect().top - self.header.getBoundingClientRect().bottom;
-
-        self.visibleHeader = function() {
-            self.headerFixed.style.display = 'block';
-            setTimeout(function () {
-                self.headerFixed.classList.remove('header-hidden');
-            },0);
-        };
-
-        self.hideHeader = function() {
-            self.headerFixed.style.display = 'none';
-            self.headerFixed.classList.add('header-hidden');
-        };
-
-        window.addEventListener('scroll', function () {
-            self.headerTop = self.header.getBoundingClientRect().top;
-            if (self.headerTop < self.headerHeight) {
-                self.visibleHeader();
-            }  else {
-                self.hideHeader();
-            }
-        });
-    }
-})();
-
-
-
-
-
-// function MoveClone(firstPoint, secondPoint) {
-//     var self = this;
-//     self.firstPoint = firstPoint;
-//     self.secondPoint = secondPoint;
-//
-//     console.log(self.firstPoint);
-//
-//     self.sizePoint = function(el) {
-//         var height = el.getBoundingClientRect().bottom - el.getBoundingClientRect().top;
-//         var width = el.getBoundingClientRect().right - el.getBoundingClientRect().left;
-//         var top = el.getBoundingClientRect().top;
-//         var left = el.getBoundingClientRect().left;
-//
-//         return {
-//             width: width,
-//             height: height,
-//             top: top,
-//             left: left
-//         }
-//     };
-//
-//     self.point = {
-//         el: null,
-//         width: function () {return self.sizePoint(self.firstPoint.el).width},
-//         height: function () {return self.sizePoint(self.firstPoint.el).height},
-//         top: function () {return self.sizePoint(self.firstPoint.el).top},
-//         left: function () {return self.sizePoint(self.firstPoint.el).left},
-//     };
-//
-//     self.clone = function() {
-//         var clone = self.firstPoint.cloneNode(true);
-//         clone.style.cssText = `
-//                 position: fixed;
-//                 top: ${self.point.top()}px;
-//                 left: ${self.point.left()}px;
-//                 transition: 1000ms;
-//                 display: block;
-//                 width: ${self.point.width()}px;
-//                 height: ${self.point.height()}px;
-//             `;
-//
-//         var appendClone = function () {
-//             console.log(clone);
-//             document.body.appendChild(clone);
-//         };
-//
-//         return {
-//             element: clone,
-//             appendClone: appendClone,
-//         };
-//     };
-//
-//     self.moveCloneIn = function () {
-//         self.point.el = self.firstPoint;
-//         self.clone().appendClone();
-//
-//         // setTimeout(function () {
-//         //     self.point.el = self.secondPoint;
-//         //     self.clone().element;
-//         // }, 1000);
-//     };
-//
-//     self.moveCloneOf = function () {
-//
-//     };
-//
-//     return {
-//         moveCloneIn: self.moveCloneIn
-//     }
-// }
-//
-// document.addEventListener('load', function () {
-//     var clone = new MoveClone(
-//         document.querySelector('.clone-img img'),
-//         document.querySelector('.clone-basket')
-//     );
-//
-//     clone.moveCloneIn();
-// });
+if (document.querySelectorAll('[data-scale="bonus"]').length) {
+    var scaleList = document.querySelectorAll('[data-scale="bonus"]');
+    [].forEach.call(scaleList, function (scale) {
+        var scl = new Scale(scale);
+        scl.init();
+    });
+}

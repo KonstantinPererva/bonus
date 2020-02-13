@@ -8,14 +8,15 @@
      display: block;
      line-height: 16px;
      font-weight: bold;
-     width: 50%;
+     width: 42%;
    }
 
   &__text {
-    font-size: 10px;
+    font-size: 11px;
     line-height: 16px;
     display: block;
-    width: 50%;
+    width: 58%;
+    text-align: right;
   }
 
   &__date {

@@ -1,16 +1,15 @@
-.action-scale {
+.wrapper-action-scale {
   display: flex;
 
   &__box {
     flex-shrink: 0;
 
     &_left {
-      width: 80px;
+      width: 70px;
     }
 
     &_right {
-      flex-shrink: 0;
-      width: 350px;
+      flex-grow: 1;
     }
   }
 }

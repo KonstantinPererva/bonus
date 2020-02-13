@@ -1,0 +1,23 @@
+.action-bonus-picture {
+  &__title {
+    display: block;
+    height: 30px;
+    margin: 0 0 5px;
+    font-size: 8px;
+    line-height: 10px;
+    font-weight: normal;
+    font-family: "lucida_sans_unicoderegular", sans-serif;
+    color: #344e9f;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

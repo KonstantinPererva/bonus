@@ -1,5 +1,9 @@
 .action-card {
-  width: 475px;
+  min-width: 474px;
   border: 1px solid #EDEDED;
   padding: 12px;
+
+  & + & {
+    margin-top: 10px;
+  }
 }
